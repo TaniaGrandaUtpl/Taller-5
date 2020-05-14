@@ -1,19 +1,45 @@
+
 <?php
-    function sumar($num1, $num2){
-        $resultado = $num1 + $num2;
-        return $resultado;
-    }
-    function verificarSiEsParoImpar($num){
-        if($num % 2 == 0){
-            return "Par";
-        }else{
-            return "Impar";
-        }
-    }
-    function Operacion($num1, $num2){
-        $suma = sumar($num1, $num2);
-        $res = verificarSiEsParoImpar($suma);
-        echo("La suma de: ". $num1." + ".$num2." da como resultado un número ".$res);
-    }
-    Operacion(10,4);
+    echo "Pre-Incremento".PHP_EOL;
+    $valor = 5;
+    echo ++$valor.PHP_EOL;
+    echo "-----------------".PHP_EOL;
+    $valor1 = 5;
+    $valor2 = 10;
+    echo (++$valor1)+($valor2).PHP_EOL;
+    echo "-----------------".PHP_EOL;
+    $valor = "r0z";
+    echo ++$valor.PHP_EOL;
+    echo "======================================".PHP_EOL;
+    echo "Post-Incremento".PHP_EOL;
+    $valor = 5;
+    echo $valor++.PHP_EOL;
+    echo $valor.PHP_EOL;
+    echo "-----------------".PHP_EOL;
+    $valor1 = 5;
+    $valor2 = 10;
+    echo $res = ($valor1++)+($valor2).PHP_EOL;
+    echo $res = ($valor1)+($valor2).PHP_EOL;
+    echo "-----------------".PHP_EOL;
+    $valor = "n";
+    echo $valor++.PHP_EOL;
+    echo $valor.PHP_EOL;
+    echo "======================================".PHP_EOL;
+    echo "Pre-Decremento".PHP_EOL;
+    $valor = 5;
+    echo --$valor.PHP_EOL;
+    echo "-----------------".PHP_EOL;
+    $valor1 = 5;
+    $valor2 = 10;
+    echo (--$valor1)+($valor2).PHP_EOL;
+    echo "======================================".PHP_EOL;
+    echo "Post-Decremento".PHP_EOL;
+    $valor = 5;
+    echo $valor--.PHP_EOL;
+    echo $valor.PHP_EOL;
+    echo "-----------------".PHP_EOL;
+    $valor1 = 5;
+    $valor2 = 10;
+    echo ($valor1--)+($valor2).PHP_EOL;
+    echo ($valor1)+($valor2).PHP_EOL;
 ?>

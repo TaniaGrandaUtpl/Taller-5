@@ -510,8 +510,8 @@
                                                                 <code class="card-text text-justify text-dark" style="white-space: pre-line;">
                                                                     &lt?php
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;function sumar($num1, $num2){
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$resultado = $num1 + $num2;
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $resultado;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$resultado = $num1 + $num2;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $resultado;
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;}
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;function verificarSiEsParoImpar($num){
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($num % 2 == 0){
@@ -521,9 +521,9 @@
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;}
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;function Operacion($num1, $num2){
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$suma = sumar($num1, $num2);
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$res = verificarSiEsParoImpar($suma);
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo("La suma de: ". $num1." + ".$num2." da como resultado un número ".$res);
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$suma = sumar($num1, $num2);
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$res = verificarSiEsParoImpar($suma);
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo("La suma de: ". $num1." + ".$num2." da como resultado un número ".$res);
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;}
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;Operacion(10,4);
                                                                     ?>
@@ -606,8 +606,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-7 mx-5 ltr">
-                                                        <h4 class="card-title text-center">Retornar una función - Array</h4>
-                                                        <p class="text-justify">Una función nos puede retornar solo un valor, así como también puede devolver cualquier tipo de valor, como un array.</p>
+                                                        <h4 class="card-title text-center">While</h4>
+                                                        <p class="text-justify">Ingresar las notas de 5 estudiantes con 4 notas y definir si aprobó o reprobó el año.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -620,16 +620,27 @@
                                                                 <h4 class="card-title ltr">Código</h4>
                                                                 <code class="card-text text-justify text-dark" style="white-space: pre-line;">
                                                                     &lt?php
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;function sumar_restar($num1, $num2){
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$resultado = array(
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'suma' => $num1 + $num2,
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'resta' => $num1 - $num2
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $resultado;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$est=1;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;while ($est <= 5){
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$nota1 = rand(0,10);
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$nota2 = rand(0,10);
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$nota3 = rand(0,10);
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$nota4 = rand(0,10);
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Estas son las notas del estudiante: $est".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "1era Nota: $nota1".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "2da Nota: $nota2".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "3era Nota: $nota3".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "4ta Nota: $nota4".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$prom = ($nota1+$nota2+$nota3+$nota4)/4;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Su promedio es: $prom".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($prom >= 7){
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Estado: Aprobado".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}else{
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Estado: Reprobado".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "--------------------------------------".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$est++;
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;}
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$resultado_de_suma_resta = sumar_restar(20, 7);
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "La suma es:".$resultado_de_suma_resta['suma']."\n";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "La resta es:".$resultado_de_suma_resta['resta'];
                                                                         ?>
                                                                 </code>
                                                             </div>
@@ -642,7 +653,27 @@
                                                                 <code class="card-text text-danger">
                                                                     </br>
                                                                     <?php
-                                                                
+                                                                        $est=1;
+                                                                        while ($est <= 5){
+                                                                            $nota1 = rand(0,10);
+                                                                            $nota2 = rand(0,10);
+                                                                            $nota3 = rand(0,10);
+                                                                            $nota4 = rand(0,10);
+                                                                            echo "Estas son las notas del estudiante: $est"."</br>";
+                                                                            echo "1era Nota: $nota1"."</br>";
+                                                                            echo "2da Nota: $nota2"."</br>";
+                                                                            echo "3era Nota: $nota3"."</br>";
+                                                                            echo "4ta Nota: $nota4"."</br>";
+                                                                            $prom = ($nota1+$nota2+$nota3+$nota4)/4;
+                                                                            echo "Su promedio es: $prom"."</br>";
+                                                                            if($prom >= 7){
+                                                                                echo "Estado: Aprobado"."</br>";
+                                                                            }else{
+                                                                                echo "Estado: Reprobado"."</br>";
+                                                                            }
+                                                                            echo "--------------------------------------"."</br>";
+                                                                            $est++;
+                                                                        }
                                                                     ?>
                                                                 </code>
                                                             </div>
@@ -670,8 +701,125 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-7 mx-5 ltr">
-                                                        <h4 class="card-title text-center">Funciones dentro de funciones</h4>
-                                                        <p class="text-justify">Dentro de una función se puede invocar o llamar más funciones con el fin de ahorrar líneas de código.</p>
+                                                        <h4 class="card-title text-center">For</h4>
+                                                        <p class="text-justify">Ingresar por teclado un número y se genere su tabla de multiplicación del 1-12</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-top my-3 mb-4 mx-4"></div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="form-dark scrollbar-dusty-grass thin square">
+                                                            <div class="card-body ">
+                                                                <h4 class="card-title ltr">Código</h4>
+                                                                <code class="card-text text-justify text-dark" style="white-space: pre-line;">
+                                                                    &ltform action="index.php" method="post">
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&ltp>Introduzca un número:
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&ltinput type="text" name="val" id="val">
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&ltinput type="submit" value="Enviar">&lt/p>
+                                                                    &lt/form>
+                                                                    &lt?php
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$num = $_POST['val'];
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "&lttable width='200' border='1'>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "&lttr>&lttd colspan='5'>TABLA DE MULTIPLICAR&lt/td>&lt/tr>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;for($i = 1; $i <= 12; $i++){
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttr>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>$i&lt/td>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>X&lt/td>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>".$num;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/td>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>=&lt/td>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>".$i*$num;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/td>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/tr>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;}
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/table>";
+                                                                    ?>
+                                                                </code>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <div class="form-dark scrollbar-dusty-grass thin square">
+                                                            <div class="card-body ">
+                                                                <h4 class="card-title ltr">Salida</h4>
+                                                                <code class="card-text text-danger">
+                                                                    </br>
+                                                                    <form action="index.php" method="post">
+                                                                        <p>Introduzca un número:
+                                                                        <input type="text" name="val" id="val">
+                                                                        <input type="submit" value="Enviar"></p>
+                                                                    </form>
+                                                                    <?php
+                                                                        $num = $_POST['val'];
+                                                                        echo "<table width='200' border='1'>";
+                                                                        echo "<tr><td colspan='5'>TABLA DE MULTIPLICAR</td></tr>";
+                                                                        for($i = 1; $i <= 12; $i++){
+                                                                            echo "<tr>";
+                                                                                echo "<td>$i</td>";
+                                                                                echo "<td>X</td>";
+                                                                                echo "<td>".$num;
+                                                                                echo "</td>";
+                                                                                echo "<td>=</td>";
+                                                                                echo "<td>".$i*$num;
+                                                                                echo "</td>";
+                                                                            echo "</tr>";
+                                                                        }
+                                                                        echo "</table>";
+                                                                    ?>
+                                                                </code>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Second slide-->
+                        </div>
+                    <!--/.Slides-->
+                    </div>
+                </div>
+                <div id="menu4" class="container tab-pane fade"><br>
+                    <!--Carousel Wrapper-->
+                    <div id="multi-item-example4" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                        <!--Controls-->
+                        <div class="controls-top my-4">
+                            <a class="btn-floating" href="#multi-item-example4" data-slide="prev"><i class="fas fa-chevron-left text-danger"></i></a>
+                            <a class="btn-floating" href="#multi-item-example4" data-slide="next"><i class="fas fa-chevron-right text-danger"></i></a>
+                        </div>
+                        <!--/.Controls-->
+
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#multi-item-example4" data-slide-to="0" class="active"></li>
+                            <li data-target="#multi-item-example4" data-slide-to="500"></li>
+                        </ol>
+                        <!--/.Indicators-->
+
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+
+                            <!--First slide-->
+                            <div class="carousel-item active my-3">
+                                <div class="row">
+                                    <div class="col-md-12 px-5">
+                                        <div class="process-box">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="process-step">
+                                                            <p class="m-0 p-0 font-weight-bold">Ejemplo</p>
+                                                            <h2 class="m-0 p-0">09</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-7 mx-5 ltr">
+                                                        <h4 class="card-title text-center">Operadores de Incremento y Decremento</h4>
+                                                        <p class="text-justify">La diferencia entre el pre-incremento y el post-incremento es que en el primer caso primero se incrementa la variable y después se utiliza y en el segundo primero se utiliza y después se incrementa. Así mismo sucede con pre-decremento y post-decremento.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -684,24 +832,49 @@
                                                                 <h4 class="card-title ltr">Código</h4>
                                                                 <code class="card-text text-justify text-dark" style="white-space: pre-line;">
                                                                     &lt?php
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;function sumar($num1, $num2){
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$resultado = $num1 + $num2;
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $resultado;
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;}
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;function verificarSiEsParoImpar($num){
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($num % 2 == 0){
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Par";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}else{
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Impar";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;}
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;function Operacion($num1, $num2){
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$suma = sumar($num1, $num2);
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$res = verificarSiEsParoImpar($suma);
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo("La suma de: ". $num1." + ".$num2." da como resultado un número ".$res);
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;}
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;Operacion(10,4);
-                                                                    ?>
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Pre-Incremento".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor = 5;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;++$valor.PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "-----------------".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor1 = 5;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor2 = 10;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo (++$valor1)+($valor2).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "-----------------".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor = "r0z";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo ++$valor.PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "======================================".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Post-Incremento".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor = 5;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo $valor++.PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo $valor.PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "-----------------".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor1 = 5;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor2 = 10;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo $res = ($valor1++)+($valor2).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo $res = ($valor1)+($valor2).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "-----------------".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor = "n";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo $valor++.PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo $valor.PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "======================================".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Pre-Decremento".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor = 5;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo --$valor.PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "-----------------".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor1 = 5;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor2 = 10;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo (--$valor1)+($valor2).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "======================================".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Post-Decremento".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor = 5;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo $valor--.PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo $valor.PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "-----------------".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor1 = 5;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$valor2 = 10;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo ($valor1--)+($valor2).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo ($valor1)+($valor2).PHP_EOL;
+                                                                        ?>
                                                                 </code>
                                                             </div>
                                                         </div>
@@ -713,7 +886,141 @@
                                                                 <code class="card-text text-danger">
                                                                     </br>
                                                                     <?php
-                                                                        
+                                                                        echo "Pre-Incremento"."</br>";
+                                                                        $valor = 5;
+                                                                        echo ++$valor."</br>";
+                                                                        echo "-----------------"."</br>";
+                                                                        $valor1 = 5;
+                                                                        $valor2 = 10;
+                                                                        echo (++$valor1)+($valor2)."</br>";
+                                                                        echo "-----------------"."</br>";
+                                                                        $valor = "r0z";
+                                                                        echo ++$valor."</br>";
+                                                                        echo "======================================"."</br>";
+                                                                        echo "Post-Incremento"."</br>";
+                                                                        $valor = 5;
+                                                                        echo $valor++."</br>";
+                                                                        echo $valor."</br>";
+                                                                        echo "-----------------"."</br>";
+                                                                        $valor1 = 5;
+                                                                        $valor2 = 10;
+                                                                        echo $res = ($valor1++)+($valor2)."</br>";
+                                                                        echo $res = ($valor1)+($valor2)."</br>";
+                                                                        echo "-----------------"."</br>";
+                                                                        $valor = "n";
+                                                                        echo $valor++."</br>";
+                                                                        echo $valor."</br>";
+                                                                        echo "======================================"."</br>";
+                                                                        echo "Pre-Decremento"."</br>";
+                                                                        $valor = 5;
+                                                                        echo --$valor."</br>";
+                                                                        echo "-----------------"."</br>";
+                                                                        $valor1 = 5;
+                                                                        $valor2 = 10;
+                                                                        echo (--$valor1)+($valor2)."</br>";
+                                                                        echo "======================================"."</br>";
+                                                                        echo "Post-Decremento"."</br>";
+                                                                        $valor = 5;
+                                                                        echo $valor--."</br>";
+                                                                        echo $valor."</br>";
+                                                                        echo "-----------------"."</br>";
+                                                                        $valor1 = 5;
+                                                                        $valor2 = 10;
+                                                                        echo ($valor1--)+($valor2)."</br>";
+                                                                        echo ($valor1)+($valor2)."</br>";
+                                                                    ?>
+                                                                </code>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.First slide-->
+
+                            <!--Second slide-->
+                            <div class="carousel-item my-3">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="process-box">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="process-step">
+                                                            <p class="m-0 p-0 font-weight-bold">Ejemplo</p>
+                                                            <h2 class="m-0 p-0">10</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-7 mx-5 ltr">
+                                                        <h4 class="card-title text-center">Más Operadores</h4>
+                                                        <p class="text-justify">Ingresar por teclado un número y se genere su tabla de multiplicación del 1-12</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-top my-3 mb-4 mx-4"></div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="form-dark scrollbar-dusty-grass thin square">
+                                                            <div class="card-body ">
+                                                                <h4 class="card-title ltr">Código</h4>
+                                                                <code class="card-text text-justify text-dark" style="white-space: pre-line;">
+                                                                    &ltform action="index.php" method="post">
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&ltp>Introduzca un número:
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&ltinput type="text" name="val" id="val">
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&ltinput type="submit" value="Enviar">&lt/p>
+                                                                    &lt/form>
+                                                                    &lt?php
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$num = $_POST['val'];
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "&lttable width='200' border='1'>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "&lttr>&lttd colspan='5'>TABLA DE MULTIPLICAR&lt/td>&lt/tr>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;for($i = 1; $i <= 12; $i++){
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttr>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>$i&lt/td>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>X&lt/td>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>".$num;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/td>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>=&lt/td>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>".$i*$num;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/td>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/tr>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;}
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/table>";
+                                                                    ?>
+                                                                </code>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <div class="form-dark scrollbar-dusty-grass thin square">
+                                                            <div class="card-body ">
+                                                                <h4 class="card-title ltr">Salida</h4>
+                                                                <code class="card-text text-danger">
+                                                                    </br>
+                                                                    <form action="index.php" method="post">
+                                                                        <p>Introduzca un número:
+                                                                        <input type="text" name="val" id="val">
+                                                                        <input type="submit" value="Enviar"></p>
+                                                                    </form>
+                                                                    <?php
+                                                                        $num = $_POST['val'];
+                                                                        echo "<table width='200' border='1'>";
+                                                                        echo "<tr><td colspan='5'>TABLA DE MULTIPLICAR</td></tr>";
+                                                                        for($i = 1; $i <= 12; $i++){
+                                                                            echo "<tr>";
+                                                                                echo "<td>$i</td>";
+                                                                                echo "<td>X</td>";
+                                                                                echo "<td>".$num;
+                                                                                echo "</td>";
+                                                                                echo "<td>=</td>";
+                                                                                echo "<td>".$i*$num;
+                                                                                echo "</td>";
+                                                                            echo "</tr>";
+                                                                        }
+                                                                        echo "</table>";
                                                                     ?>
                                                                 </code>
                                                             </div>
