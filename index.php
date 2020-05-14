@@ -51,6 +51,7 @@
 
             <!-- Tab panes -->
             <div class="tab-content">
+                <!-- ARRAYS -->
                 <div id="home" class="container tab-pane active"><br>
                     <!--Carousel Wrapper-->
                     <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
@@ -135,7 +136,7 @@
 
                             <!--Second slide-->
                             <div class="carousel-item my-3">
-                                <div class="col-md-12">
+                                <div class="col-md-12 px-5">
                                     <div class="row">
                                         <div class="process-box">
                                             <div class="container">
@@ -199,6 +200,7 @@
                     <!--/.Carousel Wrapper-->
                 </div>
 
+                <!-- MATRICES -->
                 <div id="menu1" class="container tab-pane fade"><br>
                     <!--Carousel Wrapper-->
                     <div id="multi-item-example1" class="carousel slide carousel-multi-item" data-ride="carousel">
@@ -279,7 +281,7 @@
                                                                         $data[] = array( "nombre" => "Amelia", "apellido" => "Montoto", "edad" => 35 );
                                                                         $data[] = array( "nombre" => "Ana", "apellido" => "Ramírez", "edad" => 30 );
 
-                                                                        echo "Ordenado por apellido ascendente:";
+                                                                        echo "Ordenado por apellido ascendente:"."</br>";
                                                                         foreach ($data as $clave => $fila) {
                                                                             $orden1[$clave] = $fila['apellido'];
                                                                         }
@@ -287,7 +289,7 @@
                                                                         array_multisort($orden1, SORT_ASC, $data);
 
                                                                         foreach ($data as $clave => $fila) {
-                                                                            echo $fila['apellido']." ".$fila['nombre']." - ". $fila['edad']."";
+                                                                            echo $fila['apellido']." ".$fila['nombre']." - ". $fila['edad'].""."</br>";
                                                                         }
                                                                     ?>
                                                                 </code>
@@ -304,7 +306,7 @@
 
                             <!--Second slide-->
                             <div class="carousel-item my-3">
-                                <div class="col-md-12">
+                                <div class="col-md-12 px-5">
                                     <div class="row">
                                         <div class="process-box">
                                             <div class="container">
@@ -330,18 +332,15 @@
                                                                 <h4 class="card-title ltr">Código</h4>
                                                                 <code class="card-text text-justify text-dark" style="white-space: pre-line;">
                                                                     &lt?php
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$equipo_futbol = array
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;(
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;array("Rooney","Chicharito","Gigs"),
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;array("Suarez"),
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;array("Torres","Terry","Etoo")
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;);
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$equipo_futbol = array(array("Rooney","Chicharito","Gigs"),
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array("Suarez"),
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array("Torres","Terry","Etoo"));
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;foreach($equipo_futbol as $equipo){
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "En este equipo juegan: ";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;foreach($equipo as $jugador){
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo $jugador ." ";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;}
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "<br>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "En este equipo juegan: ";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach($equipo as $jugador){
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo $jugador."";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/br>";
                                                                         &nbsp;&nbsp;&nbsp;&nbsp;}
                                                                     ?>
                                                                 </code>
@@ -355,21 +354,16 @@
                                                                 <code class="card-text text-danger">
                                                                     </br>
                                                                     <?php
-                                                                        $equipo_futbol = array
-                                                                        (
-                                                                        array("Rooney","Chicharito","Gigs"),
-                                                                        array("Suarez"),
-                                                                        array("Torres","Terry","Etoo")
-                                                                        );
+                                                                        $equipo_futbol = array(array("Rooney","Chicharito","Gigs"),
+                                                                                                array("Suarez"),
+                                                                                                array("Torres","Terry","Etoo"));
 
-                                                                        foreach($equipo_futbol as $equipo)
-                                                                        {
-                                                                        echo "En este equipo juegan: ";
-                                                                        foreach($equipo as $jugador)
-                                                                        {
-                                                                        echo $jugador ." ";
-                                                                        }
-                                                                        echo "<br>";
+                                                                        foreach($equipo_futbol as $equipo){
+                                                                            echo "En este equipo juegan: ";
+                                                                            foreach($equipo as $jugador){
+                                                                                echo $jugador ." ";
+                                                                            }
+                                                                            echo "</br>";
                                                                         }
                                                                     ?>
                                                                 </code>
@@ -387,6 +381,8 @@
                     <!--/.Slides-->
                     </div>
                 </div>
+
+                <!-- FUNCIONES -->
                 <div id="menu2" class="container tab-pane fade"><br>
                     <!--Carousel Wrapper-->
                     <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel">
@@ -483,7 +479,7 @@
 
                             <!--Second slide-->
                             <div class="carousel-item my-3">
-                                <div class="col-md-12">
+                                <div class="col-md-12 px-5">
                                     <div class="row">
                                         <div class="process-box">
                                             <div class="container">
@@ -571,6 +567,8 @@
                     <!--/.Slides-->
                     </div>
                 </div>
+
+                <!-- BUCLES -->
                 <div id="menu3" class="container tab-pane fade"><br>
                     <!--Carousel Wrapper-->
                     <div id="multi-item-example3" class="carousel slide carousel-multi-item" data-ride="carousel">
@@ -689,7 +687,7 @@
 
                             <!--Second slide-->
                             <div class="carousel-item my-3">
-                                <div class="col-md-12">
+                                <div class="col-md-12 px-5">
                                     <div class="row">
                                         <div class="process-box">
                                             <div class="container">
@@ -783,6 +781,8 @@
                     <!--/.Slides-->
                     </div>
                 </div>
+
+                <!-- OPERACIONES -->
                 <div id="menu4" class="container tab-pane fade"><br>
                     <!--Carousel Wrapper-->
                     <div id="multi-item-example4" class="carousel slide carousel-multi-item" data-ride="carousel">
@@ -943,7 +943,7 @@
 
                             <!--Second slide-->
                             <div class="carousel-item my-3">
-                                <div class="col-md-12">
+                                <div class="col-md-12 px-5">
                                     <div class="row">
                                         <div class="process-box">
                                             <div class="container">
@@ -956,7 +956,7 @@
                                                     </div>
                                                     <div class="col-md-7 mx-5 ltr">
                                                         <h4 class="card-title text-center">Más Operadores</h4>
-                                                        <p class="text-justify">Ingresar por teclado un número y se genere su tabla de multiplicación del 1-12</p>
+                                                        <p class="text-justify">Redondeo, máximo/mínimo, potencias y resto de una división.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -974,21 +974,28 @@
                                                                     &nbsp;&nbsp;&nbsp;&nbsp;&ltinput type="submit" value="Enviar">&lt/p>
                                                                     &lt/form>
                                                                     &lt?php
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;$num = $_POST['val'];
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "&lttable width='200' border='1'>";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "&lttr>&lttd colspan='5'>TABLA DE MULTIPLICAR&lt/td>&lt/tr>";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;for($i = 1; $i <= 12; $i++){
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttr>";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>$i&lt/td>";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>X&lt/td>";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>".$num;
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/td>";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>=&lt/td>";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lttd>".$i*$num;
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/td>";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/tr>";
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;}
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "&lt/table>";
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Redondear un número".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "----------------------------".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Redondear 4.5 = ".round(4.5).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Redondear -4.5 = ".round(-4.5).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Redondear 14.54555 = ".round(14.5, 2).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Redondear 4.5 = ".floor(4.5).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Redondear 4.1 = ".ceil(4.5).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "======================================".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Máximo y Mínimo".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "----------------------------".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Máximo es = ".max(80, 50, 18.1, 25).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Mínimo es = ".min(80, 50, 18.1, 25).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "======================================".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Potencias".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "----------------------------".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Potencia de 5^3 = ".pow(5, 3).PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Potencia de 5^3 = ". 5 ** 3 .PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "======================================".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Resto de una División".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "----------------------------".PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Resto de 23 dividido entre 5 = ". 23 % 5 .PHP_EOL;
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;echo "Resto de 23 dividido entre 5 = ".fmod(23, 5).PHP_EOL;
                                                                     ?>
                                                                 </code>
                                                             </div>
@@ -1000,27 +1007,29 @@
                                                                 <h4 class="card-title ltr">Salida</h4>
                                                                 <code class="card-text text-danger">
                                                                     </br>
-                                                                    <form action="index.php" method="post">
-                                                                        <p>Introduzca un número:
-                                                                        <input type="text" name="val" id="val">
-                                                                        <input type="submit" value="Enviar"></p>
-                                                                    </form>
                                                                     <?php
-                                                                        $num = $_POST['val'];
-                                                                        echo "<table width='200' border='1'>";
-                                                                        echo "<tr><td colspan='5'>TABLA DE MULTIPLICAR</td></tr>";
-                                                                        for($i = 1; $i <= 12; $i++){
-                                                                            echo "<tr>";
-                                                                                echo "<td>$i</td>";
-                                                                                echo "<td>X</td>";
-                                                                                echo "<td>".$num;
-                                                                                echo "</td>";
-                                                                                echo "<td>=</td>";
-                                                                                echo "<td>".$i*$num;
-                                                                                echo "</td>";
-                                                                            echo "</tr>";
-                                                                        }
-                                                                        echo "</table>";
+                                                                        echo "Redondear un número"."</br>";
+                                                                        echo "----------------------------"."</br>";
+                                                                        echo "Redondear 4.5 = ".round(4.5)."</br>";
+                                                                        echo "Redondear -4.5 = ".round(-4.5)."</br>";
+                                                                        echo "Redondear 14.54555 = ".round(14.5, 2)."</br>";
+                                                                        echo "Redondear 4.5 = ".floor(4.5)."</br>";
+                                                                        echo "Redondear 4.1 = ".ceil(4.5)."</br>";
+                                                                        echo "======================================"."</br>";
+                                                                        echo "Máximo y Mínimo"."</br>";
+                                                                        echo "----------------------------"."</br>";
+                                                                        echo "Máximo es = ".max(80, 50, 18.1, 25)."</br>";
+                                                                        echo "Mínimo es = ".min(80, 50, 18.1, 25)."</br>";
+                                                                        echo "======================================"."</br>";
+                                                                        echo "Potencias"."</br>";
+                                                                        echo "----------------------------"."</br>";
+                                                                        echo "Potencia de 5^3 = ".pow(5, 3)."</br>";
+                                                                        echo "Potencia de 5^3 = ". 5 ** 3 ."</br>";
+                                                                        echo "======================================"."</br>";
+                                                                        echo "Resto de una División"."</br>";
+                                                                        echo "----------------------------"."</br>";
+                                                                        echo "Resto de 23 dividido entre 5 = ". 23 % 5 ."</br>";
+                                                                        echo "Resto de 23 dividido entre 5 = ".fmod(23, 5)."</br>";
                                                                     ?>
                                                                 </code>
                                                             </div>

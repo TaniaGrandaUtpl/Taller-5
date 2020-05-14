@@ -1,45 +1,14 @@
 
 <?php
-    echo "Pre-Incremento".PHP_EOL;
-    $valor = 5;
-    echo ++$valor.PHP_EOL;
-    echo "-----------------".PHP_EOL;
-    $valor1 = 5;
-    $valor2 = 10;
-    echo (++$valor1)+($valor2).PHP_EOL;
-    echo "-----------------".PHP_EOL;
-    $valor = "r0z";
-    echo ++$valor.PHP_EOL;
-    echo "======================================".PHP_EOL;
-    echo "Post-Incremento".PHP_EOL;
-    $valor = 5;
-    echo $valor++.PHP_EOL;
-    echo $valor.PHP_EOL;
-    echo "-----------------".PHP_EOL;
-    $valor1 = 5;
-    $valor2 = 10;
-    echo $res = ($valor1++)+($valor2).PHP_EOL;
-    echo $res = ($valor1)+($valor2).PHP_EOL;
-    echo "-----------------".PHP_EOL;
-    $valor = "n";
-    echo $valor++.PHP_EOL;
-    echo $valor.PHP_EOL;
-    echo "======================================".PHP_EOL;
-    echo "Pre-Decremento".PHP_EOL;
-    $valor = 5;
-    echo --$valor.PHP_EOL;
-    echo "-----------------".PHP_EOL;
-    $valor1 = 5;
-    $valor2 = 10;
-    echo (--$valor1)+($valor2).PHP_EOL;
-    echo "======================================".PHP_EOL;
-    echo "Post-Decremento".PHP_EOL;
-    $valor = 5;
-    echo $valor--.PHP_EOL;
-    echo $valor.PHP_EOL;
-    echo "-----------------".PHP_EOL;
-    $valor1 = 5;
-    $valor2 = 10;
-    echo ($valor1--)+($valor2).PHP_EOL;
-    echo ($valor1)+($valor2).PHP_EOL;
+    $equipo_futbol = array(array("Rooney","Chicharito","Gigs"),
+                            array("Suarez"),
+                            array("Torres","Terry","Etoo"));
+
+    foreach($equipo_futbol as $equipo){
+        echo "En este equipo juegan: ";
+        foreach($equipo as $jugador){
+            echo $jugador ." ";
+        }
+        echo PHP_EOL;
+    }
 ?>
